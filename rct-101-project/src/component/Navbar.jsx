@@ -4,8 +4,6 @@ import {
   MenuList,
   MenuItem,
   Divider,
-  Stack,
-  Container,
   SimpleGrid,
 } from "@chakra-ui/react";
 import { MarkGithubIcon } from "@primer/octicons-react";
@@ -25,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg="#FFFFFF" pl="2vw" pr="5vw">
+      <Box bg="#FFFFFF" pl="2vw" pr="5vw" p="2vh">
         <Flex minWidth="max-content" alignItems="center" gap="2">
           <Box p="2">
             <Flex minWidth="max-content" alignItems="center" gap="10">
@@ -38,7 +36,6 @@ export default function Navbar() {
                 <div onMouseEnter={setFlag.on} onMouseLeave={setFlag.off}>
                   {flag ? (
                     <Menu>
-                      {/* as={Button} */}
                       <MenuButton >
                         <Heading size="s">
                           Integrations
@@ -157,13 +154,13 @@ export default function Navbar() {
 
                         <Divider orientation="horizontal" mb="10px" />
                         <Spacer />
-                        <Link to="/Integration" ml="0px">
+                        <Link to="/integration">
                           See all Integrations
                         </Link>
                       </MenuList>
                     </Menu>
                   ) : (
-                    <Heading size="s">
+                    <Heading size="s" color="#767676" fontWeight="none">
                       Integrations
                       <Button bg="#57BB71" color="white" w="1vw" h="3vh" ml="8px">
                         New
@@ -172,14 +169,14 @@ export default function Navbar() {
                   )}
                 </div>
               </Box>
-              <Heading size="s">Pricing</Heading>
-              <Heading size="s">Demo</Heading>
+              <Heading size="s" color="#767676" fontWeight="none">Pricing</Heading>
+              <Heading size="s" color="#767676" fontWeight="none">Demo</Heading>
             </Flex>
           </Box>
           <Spacer />
           <ButtonGroup gap="2">
-            <Button bg="#FFFFFF">Log in</Button>
-            <Button bg="#57BB71" color="white">
+            <Button color="#767676" fontWeight="none" bg="none" colorScheme="none">Log in</Button>
+            <Button colorScheme="whatsapp" variant="solid" bg="#57BB71" color="white">
               Sign Up
             </Button>
           </ButtonGroup>
