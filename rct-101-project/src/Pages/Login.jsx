@@ -11,15 +11,23 @@ import {
   Stack,
   Button,
   Spacer,
-  HStack,
+  Flex,
 } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import Navbar from "../component/Navbar";
+import Footer from "./Footer";
 export default function Login() {
   return (
     <>
       <Box>
-        <Heading size="lg" fontSize={55} noOfLines={1} mt="10vh">
+        <Heading
+          size="lg"
+          fontSize={45}
+          noOfLines={1}
+          mt="10vh"
+          fontWeight="semibold"
+        >
           Log in to Everhour
         </Heading>
       </Box>
@@ -30,10 +38,9 @@ export default function Login() {
         w="76vw"
         m="auto"
         mt="5vh"
-        border="1px"
-        borderColor="gray.200"
-        p="30px"
+        p="60px"
         bg="#FFFFFF"
+        boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
       >
         <GridItem colSpan={2} h="60vh">
           <Stack>
@@ -43,35 +50,57 @@ export default function Login() {
               colorScheme="teal"
               variant="outline"
             >
-              <Spacer />
               Log in with Google
             </Button>
             <Text>or</Text>
           </Stack>
-          <Input placeholder="email" />
-          <Input placeholder="email" />
-          <Button colorScheme="whatsapp" w="15vw" h="9vh">
-            Login
-          </Button>
+          <Flex direction="column" gap="3vh" mt="2vh">
+            <Input
+              placeholder="Enter your email.."
+              h="8vh"
+              border="1px"
+              borderColor="black"
+            />
+            <Input
+              placeholder="Password..."
+              h="8vh"
+              border="1px"
+              borderColor="black"
+            />
+            <Center>
+              <Button colorScheme="whatsapp" w="14vw" h="9vh" bg="#57BB71">
+                Log in
+              </Button>
+            </Center>
+          </Flex>
+          <Center mt="3vh">
+          <Flex directions="row" gap="2vw">
+            <Link>Login with SSO</Link>
+            <Link>More Login Options</Link>
+          </Flex>
+          </Center>
+          <Center mt="3vh">Reset Password</Center>
         </GridItem>
         <Center height="50vh" mt="5vh">
           <Divider orientation="vertical" />
         </Center>
-        <GridItem colStart={4} colEnd={6} h="60vh">
+        <GridItem colStart={4} colEnd={6} h="60vh" textAlign="left">
           <Text color="#EF3E38">NEWS</Text>
-          <Text>New Timeline</Text>
+          <Text fontWeight="semibold" fontSize={18} mt="2vh">
+            New Timeline
+          </Text>
           <Text>
             Sync assignments from your connected integrations automatically once
             you add a task assignee and a due date th...<Link>Learn More</Link>
           </Text>
-          <Heading as="h4" size="md" noOfLines={1}>
+          <Heading fontSize={18} noOfLines={1} fontWeight="semibold" mt="3vh">
             Updates to Tracking Time Without a Task
           </Heading>
           <Text>
             Now you can track time without a task and it will show up on team
             timesheets immediately.<Link>Learn more</Link>
           </Text>
-          <Heading as="h4" size="md" noOfLines={1}>
+          <Heading fontSize={18} noOfLines={1} fontWeight="semibold" mt="3vh">
             Integration with Todoist
           </Heading>
           <Text>
@@ -79,30 +108,60 @@ export default function Login() {
           </Text>
         </GridItem>
       </Grid>
-      <Box>
-        <Heading size="xl" as="h3" noOfLines={1} mt="10vh">
+      <Center mt="20vh">
+        <Heading
+          w="65vw"
+          color="#333333"
+          size="xl"
+          noOfLines={2}
+          fontWeight="semibold"
+        >
           New to Everhour?
         </Heading>
-      </Box>
-      <Text>Try Everhour for free and see if it works for your business</Text>
-      <Center>
+      </Center>
+      <Center mt="2vh">
+        <Heading
+          w="60vw"
+          color="#767676"
+          fontSize={24}
+          noOfLines={2}
+          fontWeight="none"
+          lineHeight={9}
+        >
+          Try Everhour for free and see if it works for your business
+        </Heading>
+      </Center>
+      <Center mt="5vh">
         <Stack direction="row" spacing={5} align="center">
           <Input
             colorScheme="teal"
             variant="outline"
             placeholder=" Work Email..."
-            w="20vw"
+            w="25vw"
+            h="8vh"
+            border="1px"
+            borderColor="black"
           />
 
-          <Button colorScheme="whatsapp" variant="solid">
+          <Button
+            colorScheme="whatsapp"
+            variant="solid"
+            bg="#57BB71"
+            h="8vh"
+            w="12vw"
+          >
             Try it free
           </Button>
         </Stack>
       </Center>
-      <Center>
-      <FcGoogle size={30}/>
-      <span>Or signup with Google Account</span>
-            </Center>
+      <Center mt="2vh">
+        <Flex w="19.5vw">
+          <FcGoogle size={23} />
+          <Spacer />
+          <Text color="#767676">Or sign up with Google Account</Text>
+        </Flex>
+      </Center>
+      <Footer/>
     </>
   );
 }

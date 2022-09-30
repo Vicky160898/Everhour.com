@@ -9,7 +9,7 @@ export default function AllRoutes(){
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/integration" element={<Integration/>}/>
+        {/* <Route path="/integration" element={<Integration/>}/> */}
         {/* <Route path="/" element={}/>
         <Route path="/" element={}/> */}
     </Routes>
