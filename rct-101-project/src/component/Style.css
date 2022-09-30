@@ -1,0 +1,9 @@
+.arrow{
+    display:block;
+    border:1px solid red,
+}
+.slider {
+    width:'80%';
+    margin:"auto";
+    border:"1px solid red";
+}
