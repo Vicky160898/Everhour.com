@@ -16,9 +16,11 @@ import {
 import { MdCircle } from "react-icons/md";
 import { FcGoogle } from "react-icons/fc";
 import Mid from "../component/Mid";
+import Slider from "../component/Slider";
 export default function Bottom() {
   return (
     <>
+    <Slider/>
     <Mid/>
       <Center w="85vw" m="auto" mt="20vh">
         <Grid templateColumns="repeat(2, 1fr)">

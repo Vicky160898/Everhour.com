@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import "./Style.css";
+
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-import {Flex,Container} from "@chakra-ui/react"
+import { Flex, Container } from "@chakra-ui/react";
 const data = [
   {
     id: 0,
@@ -51,24 +51,29 @@ export default function Slider() {
     return null;
   }
   return (
-    <div className="slider" >
-    <Flex width="80%" >
-    <FaArrowAltCircleLeft onClick={preSlide} />
-      
-      <div width="80%">
-        {Data.map((el, i) => {
-          return (
-            <div
-               className={i === index ? "slide active" : "slide"}
-              key={i}
-            >
-              {i === index && <img src={el.src} alt="img" width="100%"/>}
-            </div>
-          );
-        })}
-      </div>
-      <FaArrowAltCircleRight onClick={nextSlide} />
-    </Flex>
-     </div>
+    <div
+      style={{  width: "100%", margin: "auto", marginTop:"10vh" }}
+    >
+      <Flex
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <FaArrowAltCircleLeft onClick={preSlide} fontSize={45} mr="3vw"/>
+
+        <div width="100%">
+          {Data.map((el, i) => {
+            return (
+              <div>
+                {i === index && <img src={el.src} alt="img" width="100%" />}
+              </div>
+            );
+          })}
+        </div>
+        <FaArrowAltCircleRight onClick={nextSlide} fontSize={45} />
+      </Flex>
+    </div>
   );
 }
