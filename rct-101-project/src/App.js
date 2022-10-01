@@ -12,9 +12,9 @@ import Slider from "./component/Slider";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar />
-      <AllRoutes /> */}
-      <Slider/>
+      <Navbar />
+      <AllRoutes />
+      {/* <Slider/> */}
     </div>
   );
 }

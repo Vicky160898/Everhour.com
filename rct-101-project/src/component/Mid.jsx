@@ -12,7 +12,7 @@ import {
 export default function Mid() {
   return (
     <>
-      <Box w="75vw" m="auto">
+      <Box w="75vw" m="auto" mt="5vh">
         <Grid templateColumns="repeat(3, 1fr)" gap={10}>
           <GridItem w="100%" h="10" textAlign="left" color="#767676">
             <Highlight
