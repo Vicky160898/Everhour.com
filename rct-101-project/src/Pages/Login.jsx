@@ -1,7 +1,6 @@
 import {
   Box,
   Text,
-  Container,
   Center,
   Divider,
   Heading,
@@ -13,11 +12,33 @@ import {
   Spacer,
   Flex,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Navbar from "../component/Navbar";
 import Footer from "./Footer";
+import axios from "axios";
 export default function Login() {
+  const [email, setEmail] = useState();
+  const [Password, setPassword] = useState();
+  const [isAuth,setAuth] = useState(false)
+
+  function handleSubmit() {
+    let user = { email, Password };
+    axios
+      .post("https://reqres.in/api/login", user)
+      .then((res) => {
+        console.log(res);
+        setAuth(true)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    // url: "https://reqres.in/api/login",
+  };
+  if(isAuth){
+    return <Navigate to="/" />
+  }
   return (
     <>
       <Box>
@@ -60,24 +81,36 @@ export default function Login() {
               h="8vh"
               border="1px"
               borderColor="black"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <Input
               placeholder="Password..."
               h="8vh"
               border="1px"
               borderColor="black"
+              type="password"
+              value={Password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <Center>
-              <Button colorScheme="whatsapp" w="14vw" h="9vh" bg="#57BB71">
+              <Button
+                colorScheme="whatsapp"
+                w="14vw"
+                h="9vh"
+                bg="#57BB71"
+                onClick={handleSubmit}
+              >
                 Log in
               </Button>
             </Center>
           </Flex>
           <Center mt="3vh">
-          <Flex directions="row" gap="2vw">
-            <Link>Login with SSO</Link>
-            <Link>More Login Options</Link>
-          </Flex>
+            <Flex directions="row" gap="2vw">
+              <Link>Login with SSO</Link>
+              <Link>More Login Options</Link>
+            </Flex>
           </Center>
           <Center mt="3vh">Reset Password</Center>
         </GridItem>
@@ -161,7 +194,7 @@ export default function Login() {
           <Text color="#767676">Or sign up with Google Account</Text>
         </Flex>
       </Center>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,6 @@
+
+.motion:hover{
+    border:1px solid green;
+    transition: 1.5s;
+    
+}
