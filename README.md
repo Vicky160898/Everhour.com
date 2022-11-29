@@ -1,7 +1,7 @@
 
 # Everhour.com clone
  This is a website that deals with free time tracking software with hassle-free integrations. Track time and watch progress inside two
- dozen popular apps.
+ dozen popular apps.Take control of your time with Everhour.Track time from the apps you already use.
 
 
   ## Tech Stacks 🛠
