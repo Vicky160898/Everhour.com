@@ -10,11 +10,17 @@
      
   
   ## Clone Snaps :-
- ![everhour](https://user-images.githubusercontent.com/107462150/199266198-55e0a06e-28ab-4ace-9a1d-6df63f755814.png)
+  
+  ## Home Page :- 
+ ![everhour](![e1](https://user-images.githubusercontent.com/107462150/207070176-73cd0cc2-841e-47d3-bbd0-0aa3493fc3f0.png)
+)
 
- ![everhour2 com](https://user-images.githubusercontent.com/107462150/199267249-ccf6efd4-ce5e-4749-ad06-e253b709d499.png)
 
+## Product Page :- 
+ ![everhour2 com](https://user-images.githubusercontent.com/107462150/207071132-6425f833-e60d-4318-987b-2d7608914376.png)
 
+## Service Page :- 
+ ![everhour2 com](https://user-images.githubusercontent.com/107462150/207071132-6425f833-e60d-4318-987b-2d7608914376.png)
 
   # Deployed Link :-
    [https://everhour.vercel.app/]
