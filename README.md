@@ -20,7 +20,8 @@
  ![everhour2 com](https://user-images.githubusercontent.com/107462150/207071132-6425f833-e60d-4318-987b-2d7608914376.png)
 
 ## Service Page :- 
- ![everhour2 com](https://user-images.githubusercontent.com/107462150/207071132-6425f833-e60d-4318-987b-2d7608914376.png)
+ ![everhour2 com](https://user-images.githubusercontent.com/107462150/207072214-f8b8ab0b-c912-4609-866b-8340012b8917.png)
+
 
   # Deployed Link :-
    [https://everhour.vercel.app/]
